@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        p,
+        div {
+            margin-right: 50px;
+            display: inline-block;
+        }
+
+        div:nth-child(2) {
+            position: relative;
+            top: -20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid grey;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 10px;
+        }
+
+        caption {
+            font-size: 20px;
+            color: blue;
+        }
+    </style>
+    <form action="#">
+        <div>
+            <p>Firstname:</p>
+            <br>
+            <input type="text">
+            <br>
+            <p>Birthday:</p>
+            <br>
+            <input type="date">
+            <br>
+            <p>Country:</p>
+            <br>
+            <select name="countrys" id="countrys">
+                <option value="Ukraine">Ukraine</option>
+                <option value="Greece">Greece</option>
+                <option value="Turkey">Turkey</option>
+            </select>
+        </div>
+        <div>
+            <p>Lastname:</p>
+            <br>
+            <input type="text">
+            <br>
+            <p style="margin-right: 10px;">Gender:</p>
+            Male<input name="Gender" type="radio">
+            Female<input name="Gender" type="radio">
+            <br>
+            <p>Country:</p>
+            <br>
+            <select name="city" id="countrys">
+                <option value="Odessa">Odessa</option>
+                <option value="Afins">Afins</option>
+                <option value="Stambul">Stambul</option>
+            </select>
+        </div>
+        <br>
+        <br>
+        <br>
+        Skilss
+        HTML<input type="checkbox" value="HTML" name="HTML" id="">
+        CSS<input type="checkbox" value="CSS" name="CSS" id="">
+        JS<input type="checkbox" value="JS" name="JS" id="">
+        PHP<input type="checkbox" value="PHP" name="PHP" id="">
+        C++<input type="checkbox" value="C++" name="C++" id="">
+        C#<input type="checkbox" value="C#" name="C#" id="">
+        JAVA<input type="checkbox" value="JAVA" name="JAVA" id="">
+
+        <br><input id="subm" style="margin-top: 50px;width: 500px;" type="submit" value="SAVE">
+    </form>
+    <table>
+        <tr>
+            <td>Firstname</td>
+            <td class="inputGo"></td>
+        </tr>
+
+        <tr>
+            <td>Lastname</td>
+            <td class="inputGo"></td>
+        </tr>
+
+        <tr>
+            <td>Birthday</td>
+            <td class="inputGo"></td>
+        </tr>
+
+        <tr>
+            <td>Gender</td>
+            <td class="inputGo"></td>
+        </tr>
+        <tr>
+            <td>Country</td>
+            <td class="inputGo"></td>
+        </tr>
+
+        <tr>
+            <td>City</td>
+            <td class="inputGo"></td>
+        </tr>
+
+        <tr>
+            <td>Skils</td>
+            <td class="inputGo"></td>
+        </tr>
+    </table>
+
+    <script>
+        let inputs = document.querySelectorAll("input");
+        let gender = document.querySelector('input[name="Gender"]:checked');
+        let subm = document.querySelector("#subm");
+        let skills = document.querySelectorAll('input[type="checkbox"]:checked');
+        subm.addEventListener("click", show)
+        function show() {
+            for (let i = 0; i < inputs.length; i++) {
+                console.log(inputs[i].value)
+            }
+        }
+    </script>
+</body>
+
+</html>
